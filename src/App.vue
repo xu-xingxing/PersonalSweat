@@ -5,8 +5,13 @@
         <m-header></m-header>
       </el-header>
       <el-container>
-        <el-aside width="200px">Aside</el-aside>
-        <el-main>Main</el-main>
+        <el-aside width="200px">
+          <m-aside></m-aside>
+        </el-aside>
+        <el-main>
+          <m-content>
+          </m-content>
+        </el-main>
       </el-container>
        <el-footer>Footer</el-footer>
     </el-container height="80px">
@@ -15,10 +20,14 @@
 
 <script>
 import MHeader from 'components/m-header/m-header'
+import MAside from 'components/m-aside/m-aside'
+import MContent from 'components/m-content/m-content'
 export default {
   name: 'App',
   components: {
-    MHeader
+    MHeader,
+    MAside,
+    MContent
   }
 }
 </script>
@@ -45,6 +54,6 @@ html, body, #app, .el-container
   background-color: #e9eef3
   color: #333
   text-align: center
-  background: $color-m-background
+  padding: 10px;
 
 </style>
